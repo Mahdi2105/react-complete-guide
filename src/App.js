@@ -1,4 +1,5 @@
-import Expenses from "./components/Expenses";
+// import React from "react";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
   const expensesConst = [
@@ -27,7 +28,14 @@ function App() {
       date: new Date(2021, 5, 12),
     },
   ];
-  const myName = "Mahdi";
+
+  // Without JSX it would be like this
+  // return React.createElement(
+  //   "div",
+  //   {},
+  //   React.createElement(Expenses, { items: expensesConst })
+  // );
+
   return (
     <div>
       <Expenses items={expensesConst} />
